@@ -1,0 +1,65 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<!-- Copiar siempre en las plantillas  -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Hasta aca  -->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+
+
+	<title>{% block title%}Punto Verde{% endblock %}</title>
+</head>
+
+<body>
+	{% block header %}
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light,navbar navbar-dark bg-primary">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Quienes Somos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contáctanos</a>
+					</li>
+				</ul>
+
+			</div>
+		</nav>
+	</header>
+	{% endblock %}
+
+
+	{% block contenedor %}
+	<div>
+		<h3>ESTE ES EL BLOQUE CONTENEDOR</h3>
+	</div>
+
+	{% endblock %}
+
+	{% block footer %}
+	<footer>
+		<div id="footer">
+			<p class="fot">2019 <strong>PUNTOVERDE</strong>/DESARROLADO JP-FC</p>
+			<img src="img/Facebook.png" width="30" height="30" alt="Logo" href="www.Facebook.com"; >
+		</div>
+	</footer>
+	{% endblock %}
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
