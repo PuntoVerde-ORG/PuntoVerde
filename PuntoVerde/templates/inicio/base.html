@@ -24,14 +24,14 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
 				<ul class="navbar-nav mr-auto" align="center">
-					<li class="nav-item">
+					<li class="nav-item {% if request.path == '/' %}active {% endif %} ">
 						<a class="nav-link" href="{% url 'index' %}">Inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'somos' %}">Quiénes somos</a>
+						<a class="nav-link {% if request.path == '/QuienesSomos' %}active {% endif %}" href="{% url 'somos' %}">Quiénes somos</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'noticias' %}">Noticias</a>
+					<li class="nav-item {% if request.path == '/noticias' %}active {% endif %}">
+						<a class="nav-link" href="{% url 'listarnoticias' %}">Noticias</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'contacto' %}">Contácto</a>
@@ -62,7 +62,7 @@
 		{% endblock %}
 	</div>
 
-	{% if request.path != "/" %}<hr>{% endif %}
+	{% if request.path != "/"  %}<hr>{% endif %}
 
 	{% block footer %}
 	<footer>

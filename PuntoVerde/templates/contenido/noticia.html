@@ -5,27 +5,30 @@
 
 {% block contenedor %}
 
-{{noticias}}
-
 <section class="page-section clearfix">
   <div class="container">
     <div class="intro">
       <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/Inicioback.jpg' %}" alt="">
-      <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-        <h2 class="section-heading mb-4">
-          <span class="section-heading-upper">Déjate sorprender</span>
-          <span class="section-heading-lower">Te gustará</span>
-        </h2>
-        <p class="mb-3">Trabajamos sólo con los mejores ingredientes. Una vez lo pruebes, nuestro café será la mejor forma de empezar tu rutina diaria.
-        </p>
-        <div class="intro-button mx-auto">
-          <a class="btn btn-primary btn-xl" href="store.html">Visítanos</a>
-        </div>
-      </div>
+      
+
     </div>
   </div>
 </section>
+<br>
 
+{% for noticia in noticias %}
+<!-- Noticias -->
+<div class="row project">   
+  <div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid" src="{{noticia.imagen.url}}" alt="">
+  </div>
+  <div class="col-lg-7 col-md-8">
+    <h2 class="section-heading title">{{noticia.titulo}}</h2>   
+    <p>{{noticia.descripcion}}</p>
+  </div>
+</div>
+<hr>
+{% endfor %}
 
 
 {% endblock %}
