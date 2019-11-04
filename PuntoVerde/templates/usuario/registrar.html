@@ -1,0 +1,16 @@
+
+
+
+
+{% block contenedor %}
+<div>
+	<form method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button type="submit">Registrar</button>
+
+	</form>
+
+</div>
+
+{% endblock %}
