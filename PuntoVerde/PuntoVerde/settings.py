@@ -131,3 +131,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+#CONFIGURACION DE EMAIL 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'felipeandrescatalan.18@gmail.com'
+EMAIL_HOST_PASSWORD = 'IntoTheWild'
+EMAIL_PORT = 587

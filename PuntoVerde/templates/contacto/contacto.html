@@ -33,7 +33,7 @@
 
 
 <h2 id="InicioFormulario" style="text-align: center;">Envianos tus consultas</h2>
-<form id="formContacto" action="" method="POST" onsubmit="return validarDatos(formContacto);">
+<form id="formContacto" action="" method="POST">
 	<br>
 	{% csrf_token %}
 	<div class="container">
@@ -41,11 +41,13 @@
 			<div class="col-md-5 mb-3">
 				<label for="validationDefault01">Nombre *</label>
 				{{form.nombre}}
+				
 			</div>
 
 			<div class="col-md-5 mb-3">
 				<label for="validationDefault02">Apellidos *</label>
 				{{form.apellido}}
+				
 			</div>
 
 		</div>
@@ -54,6 +56,7 @@
 			<div class="col-md-6 mb-3">
 				<label for="validationDefault03">Correo *</label>
 				{{form.correo}}
+
 			</div>
 			<div class="col-md-6 mb-3">
 				<label for="validationDefault04">Confirmar correo *</label>
@@ -74,7 +77,7 @@
 		</div>
 
 		<!-- validar datos del form con JavaScrips -->
-		<script>
+		<!-- <script>
 			var formulario = document.getElementById("formContacto");
 
 
@@ -135,13 +138,17 @@
 
 
 			}
-		</script>
+		</script> -->
 
 
 	</div>
 
 
 </form>
+
+{% if 'FALLO' in request.GET %}
+<p><b>Algo salio mal no hemos recibido su solicitud </b> </p>
+{% endif %}
 
 {% if 'OK' in request.GET %}
 <p><b>Hemos recibido su solicitud </b> </p>
