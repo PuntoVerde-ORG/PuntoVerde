@@ -12,8 +12,6 @@ def somos(request):
 	return render(request,'inicio/somos.html')
 
 
-def contacto(request):
-	return render(request,'inicio/contacto.html')
 
 
 

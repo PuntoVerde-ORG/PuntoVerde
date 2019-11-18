@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Hasta aca  -->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 
 
 	<title>{% block title %}{% endblock %} | Punto Verde</title>
@@ -34,13 +34,13 @@
 						<a class="nav-link" href="{% url 'listarnoticias' %}">Noticias</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'contacto' %}">Contácto</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link" href="#">Registrarse</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Login</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'contacto' %}">Contácto</a>
 					</li>
 
 				</ul>
@@ -57,7 +57,7 @@
 	{% endblock %}
 
 	<!-- Contenido -->
-	<div class="container">
+	<div >
 		{% block contenedor %}
 		{% endblock %}
 	</div>
