@@ -5,4 +5,8 @@ BASE DE DATOS
 SUPERUSUARIO DJANGO
 *USER PuntoVerdeADMIN 
 *CLAVE Links234
-pbkdf2_sha256$150000$NLR8mKylmDVo$S3id9d0ffAzF1j4DSfJZNi//C899kbp4aBzQf8d93wU=
+
+
+CORREO DE CONTACTO
+Correo:contacto.punto.verde2019@gmail.com
+Contraseña:Links234

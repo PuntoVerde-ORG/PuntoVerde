@@ -133,7 +133,9 @@ MEDIA_ROOT = MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #CONFIGURACION DE EMAIL 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '0bc7250eb4d46d'
-EMAIL_HOST_PASSWORD = 'fda9062eecda39'
-EMAIL_PORT = '2525'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'contacto.punto.verde2019@gmail.com'
+EMAIL_HOST_PASSWORD = 'Links234'
+EMAIL_PORT = 587
