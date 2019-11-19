@@ -133,8 +133,7 @@ MEDIA_ROOT = MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 #CONFIGURACION DE EMAIL 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'felipeandrescatalan.18@gmail.com'
-EMAIL_HOST_PASSWORD = 'IntoTheWild'
-EMAIL_PORT = 587
+EMAIL_HOST = 'smtp.mailtrap.io'
+EMAIL_HOST_USER = '0bc7250eb4d46d'
+EMAIL_HOST_PASSWORD = 'fda9062eecda39'
+EMAIL_PORT = '2525'

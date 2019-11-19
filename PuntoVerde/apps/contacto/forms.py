@@ -10,9 +10,6 @@ class formularioContacto(forms.Form):
 	correo = forms.EmailField(label="correo", required=True, widget=forms.EmailInput(
 		attrs={'class':'form-control','id':'validationDefault03'}
 		))
-	correo2 = forms.EmailField(label="correo2", required=True, widget=forms.EmailInput(
-		attrs={'class':'form-control','id':'validationDefault04'}
-		))
 	asunto = forms.CharField(label="asunto", max_length=250, min_length=10,required=True, widget=forms.Textarea(
 		attrs={'class':'form-control','id':'validationDefault04'}
 		))

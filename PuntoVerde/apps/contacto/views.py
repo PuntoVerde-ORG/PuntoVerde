@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect
 from .forms import formularioContacto
 from django.core.mail import EmailMessage
 from django.urls import reverse
+from django.conf import settings
 
 # Create your views here.
 def contacto(request):
@@ -14,28 +15,30 @@ def contacto(request):
 			nombre = request.POST.get ('nombre', '')
 			apellido = request.POST.get ('apellido', '')
 			correo = request.POST.get ('correo', '')
-			correo2 = request.POST.get ('correo2', '')
 			asunto = request.POST.get ('asunto', '')
 
 
-			# Ok
-			#Enviamos correo
-			correo= EmailMessage (
-				"Punto Verde : Hemos Recibido su formulario",
-				"De {} <{}>\n\nTu Mensaje:\n\n{}".format(nombre,apellido,correo,asunto),
-				"felipeandrescatalan.18@gmail.com",
-				["transmutadordef@gmail.com"],
+			# # Ok
+			# #Enviamos correo
+			email = EmailMessage(
+				"Punto Verde : Tienes un nuevo mensaje de contacto",
+				"De {} {} <{}>\n\nEl mensaje es : \n\n{}".format(nombre, apellido, correo, asunto),
+				"no-contestar@inbox.mailtrap.io",
+				["felipe@bericul.com"],
 				reply_to=[correo]
-			)
 
+
+
+
+				)
 			try:
 				email.send()
 				return redirect(reverse('contacto')+"?OK")
 			except:
-				#Algo salio mal 
 				return redirect(reverse('contacto')+"?FALLO")
 
-			
+
+
 
 
 	return render(request,'contacto/contacto.html',{'form': formulario})

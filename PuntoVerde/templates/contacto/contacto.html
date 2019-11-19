@@ -33,6 +33,18 @@
 
 
 <h2 id="InicioFormulario" style="text-align: center;">Envianos tus consultas</h2>
+
+<div class="container">
+	{% if 'FALLO' in request.GET %}
+	<p><b>Algo salio mal no hemos recibido su solicitud </b> </p>
+	{% endif %}
+
+	{% if 'OK' in request.GET %}
+	<p><b>Hemos recibido su solicitud </b> </p>
+	{% endif %}
+</div>
+
+
 <form id="formContacto" action="" method="POST">
 	<br>
 	{% csrf_token %}
@@ -53,14 +65,9 @@
 		</div>
 
 		<div class="form-row">
-			<div class="col-md-6 mb-3">
+			<div class="col-md-7 mb-3">
 				<label for="validationDefault03">Correo *</label>
 				{{form.correo}}
-
-			</div>
-			<div class="col-md-6 mb-3">
-				<label for="validationDefault04">Confirmar correo *</label>
-				{{form.correo2}}
 			</div>
 			<div class="col-md-6 mb-4">
 				<label for="validationDefault05">Mensaje *</label>
@@ -145,18 +152,6 @@
 
 
 </form>
-
-{% if 'FALLO' in request.GET %}
-<p><b>Algo salio mal no hemos recibido su solicitud </b> </p>
-{% endif %}
-
-{% if 'OK' in request.GET %}
-<p><b>Hemos recibido su solicitud </b> </p>
-{% endif %}
-
-{{request.POST}} 
-
-
-
+ 
 
 {% endblock %}
