@@ -23,7 +23,7 @@
 				<i class="fa fa-bars"></i>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav mr-auto" align="center">
+				<ul class="navbar-nav mr-auto " align="center">
 					<li class="nav-item {% if request.path == '/' %}active {% endif %} ">
 						<a class="nav-link" href="{% url 'index' %}">Inicio</a>
 					</li>
@@ -33,16 +33,30 @@
 					<li class="nav-item {% if request.path == '/noticias' %}active {% endif %}">
 						<a class="nav-link" href="{% url 'listarnoticias' %}">Noticias</a>
 					</li>
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a class="nav-link" href="#">Registrarse</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Login</a>
-					</li>
+					</li> -->
+					<!-- <li class="nav-item">
+						<a class="nav-link" href="{% url 'login' %}">Login</a>
+					</li> -->
 					<li class="nav-item">
 						<a class="nav-link" href="{% url 'contacto' %}">Contácto</a>
 					</li>
 
+				</ul>
+				<ul class="navbar-nav">
+					{% if not request.user.is_authenticated %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'login' %}">Ingresar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'signup' %}">Registrarse</a>
+					</li>
+					{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'logout' %}">Salir</a>
+					</li>
+					{% endif %}
 				</ul>
 
 			</div>

@@ -30,7 +30,8 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
+    'apps.registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,3 +140,9 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'contacto.punto.verde2019@gmail.com'
 EMAIL_HOST_PASSWORD = 'Links234'
 EMAIL_PORT = 587
+
+## REDIRECT DESPUES DEL LOGIN 
+
+LOGIN_REDIRECT_URL = 'index'
+## REDIRECT DESPUES DEL LOGOUT
+LOGOUT_REDIRECT_URL= 'index'
