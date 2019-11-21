@@ -3,22 +3,23 @@
 
 {% block title %}Noticias{% endblock %}
 
+
 {% block contenedor %}
-
-<section class="page-section clearfix">
-  <div class="container">
-    <div class="intro">
-      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'img/Inicioback.jpg' %}" alt="">
-      
-
-    </div>
-  </div>
-</section>
 <br>
-
+<br>
+<br>
+{% if request.user.is_staff %}
+<div class="container">
+  <nav class="nav">
+    <a class="nav-link active" href="admin/contenido/noticia/">Lista de Contenido</a>
+    <a class="nav-link" href="admin/contenido/noticia/add/">Crear Noticia</a>
+  </nav>
+</div>
+{% endif %}
+<br>
 {% for noticia in noticias %}
 <!-- Noticias -->
-<div class="row project">   
+<div class="row project">
   <div class="col-lg-3 col-md-4 offset-lg-1">
     <img class="img-fluid" src="{{noticia.imagen.url}}" alt="">
   </div>
