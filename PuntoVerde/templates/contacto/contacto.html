@@ -9,29 +9,6 @@
 <br>
 <br>
 
-<!-- <h2>Envianos tus consultas</h2>
-{% if 'OK' in request.GET %}
-  <p><b>Hemos recibido su solicitud </b> </p>
-{% endif %}
-<form action="" method="POST">
-	{% csrf_token %}
-	
-	<table>
-		{{form.as_table}}
-	</table>
-	<input type="submit" id="btnEnviar" name="btnEnviar" value="Enviar" class="btnEnviar"/>
-
-	
-	
-
-</form>
-{{request.POST}} -->
-
-
-
-
-
-
 <h2 id="InicioFormulario" style="text-align: center;">Envianos tus consultas</h2>
 
 <div class="container">
@@ -69,7 +46,7 @@
 				<label for="validationDefault03">Correo *</label>
 				{{form.correo}}
 			</div>
-			<div class="col-md-6 mb-4">
+			<div class="col-md-7 mb-2">
 				<label for="validationDefault05">Mensaje *</label>
 				{{form.asunto}}
 			</div>

@@ -11,6 +11,10 @@ class formularioContacto(forms.Form):
 		attrs={'class':'form-control','id':'validationDefault03'}
 		))
 	asunto = forms.CharField(label="asunto", max_length=250, min_length=10,required=True, widget=forms.Textarea(
-		attrs={'class':'form-control','id':'validationDefault04'}
+		attrs={'class':'form-control mt-1', 'rows':3,'id':'validationDefault04'}
 		))
+	
+
+
+
 	

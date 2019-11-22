@@ -69,28 +69,29 @@
 	
 
 
-	<!-- Cabecera -->
-	{% block header %}
-	
-	{% endblock %}
 
 	<!-- Contenido -->
-	<div >
-		{% block contenedor %}
-		{% endblock %}
-	</div>
+	
+	{% block contenedor %}
+	{% endblock %}
+
 
 	{% if request.path != "/"  %}<hr>{% endif %}
 
-	{% block footer %}
+	
+
+
 	<footer>
-		<div id="footer">
-			<p class="fot">2019 <strong>PUNTOVERDE</strong>/DESARROLADO JP-FC</p>
-			<img src="{% static 'img/Facebook.png' %}" width="30" height="30" alt="Logo" href="www.Facebook.com"; >
+		<div style="text-align: center; background: #3F5BCF; height: 50px;" >
+			<div id="footer">
+				<p class="footer">2019 <strong>PUNTOVERDE</strong>/DESARROLADO JP-FC</p>
+				<img src="{% static 'img/Facebook.png' %}" width="30" height="30" alt="Logo" href="www.Facebook.com"; >
+			</div>
 		</div>
+		
 	</footer>
 
-	{% endblock %}
+	
 
 
 	
