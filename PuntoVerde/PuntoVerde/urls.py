@@ -18,7 +18,7 @@ from django.urls import path, include
 from apps.contenido import views as contenido_views
 from apps.inicio import views as inicio_views
 from apps.contacto import views as contacto_views
-
+from apps.profiles.urls import profiles_patterns
 
 # ver imagenes 
 from django.conf import settings
@@ -32,6 +32,7 @@ urlpatterns = [
     ##Path de autenticacion
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('apps.registration.urls')),
+    path('profiles/', include(profiles_patterns)),
     
 ]
 
